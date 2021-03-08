@@ -35,18 +35,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      - name: Run Azure webapp deploy action using publish profile credentials
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: node-rn
-          publish-profile: '${{ secrets.azureWebAppPublishProfile }}'
-    env:
-      SECRET_NAME: '${{secrets.GITHUB_CREDENTIAL_NAME}}'
-      SECRET_PASSWORD: '${{secrets.GITHUB_CREDENTIAL_PASSWORD}}'
-    if: github.ref == 'refs/heads/master' && job.status == 'success'
-    run: |
-      git remote add [repo link]
-      git push -u origin HEAD:master -f
+   
 
 
           
