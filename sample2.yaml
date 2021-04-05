@@ -8,6 +8,11 @@ job:
      - name: step one
        uses: actions/checkout@v2
      - name: step two
+     - run: |
+     hostname
+     whoami
+     pwd
+     cat /etc/os-release
      
  job2: 
     name: second job
@@ -16,4 +21,6 @@ job:
     - name: step one
       uses: actions/checkout@v2
     - name: step two
+      run: |
+      "Get-ChildItem Env: | Sort-Object Name"
     
