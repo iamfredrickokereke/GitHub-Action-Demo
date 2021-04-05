@@ -1,0 +1,29 @@
+#This is a simple template for using github actions:
+
+name: Push to github
+
+on: push  # [push, pull]
+
+jobs: 
+
+   job1:
+      name: first job
+      runs-on: ubuntu-latest
+      steps:
+          - name: step one
+          - name: step two
+    
+    
+   job2:
+      name: second job
+      runs-on: windows-latest
+      steps:
+          - name: step one
+          - name: step two
+          
+   job3:
+      name: third job
+      runs-on: windows-latest
+      steps:
+          - name: step one
+          - name: step two        
