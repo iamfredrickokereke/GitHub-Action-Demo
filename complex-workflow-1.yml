@@ -1,1 +1,44 @@
 
+# This is an attempt to create a complex workflow leveraging on previous learning
+# This workflow would have 4 jobs, a push trigger, date printed and use each OS runner, note that the 4th job has a dependency on job 1, 2 and 3
+
+
+name: Complex workflow 1
+on: push
+jobs:
+   job1:
+      name: first job
+      runs-on: ubuntu-latest
+      steps:
+      - name: first step
+      - name: second step
+        run: |
+        date
+
+   job2:
+      name: second job
+      runs-on: windows-latest
+      steps:
+      - name: first step
+      - name: second step
+        run: |
+        date
+
+   job3:
+      name: third job
+      runs-on: macOS-latest
+      steps:
+      - name: first step
+      - name: second step
+        run: |
+        date
+
+   job4:
+      name: fourth job
+      needs: [job1, job2, job3]
+      runs-on: windows-latest
+      steps:
+      - name: first step
+      - name: second step
+        run: |
+        date      
