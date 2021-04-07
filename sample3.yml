@@ -18,12 +18,12 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v1.0.0
         with:
-            name: linux
-            path: ./${{ env.ARTIFACT_NAME }}
+            name: ${{ env.ARTIFACT_NAME }}
+            path: .
         
       - name: Echo an output
-        run: |
-        echo 'Linux build action completed successfully'
+        run: echo 'Linux build action completed successfully'
+
    windows-job:
       name: A windows build job
       runs-on: [windows-latest]
@@ -34,9 +34,9 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v1.0.0
         with:
-          name: windows
-          path: ./${{ env.ARTIFACT_NAME }}
+          name: ${{ env.ARTIFACT_NAME }}
+          path: .
 
       - name: Echo an output
-        run: |
-        echo 'Windows build action completed successfully'  
+        run: echo 'Windows build action completed successfully'  
+
