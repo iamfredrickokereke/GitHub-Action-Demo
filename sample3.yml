@@ -1,1 +1,34 @@
+---
 
+# A workflow that shows integration of marketplace actions and how artifacts are built and used, alongside Environment Variables
+
+name: Push Trigger
+on: push
+env:
+  ARTIFACT_NAME: 'Build files from Artifact!'
+jobs: 
+   linux-job:
+              name:
+              runs-on: ubuntu-latest
+              steps:
+              - name: Checkout code
+                uses: actions/checkout@v2
+                
+                
+              - name: upload artifacts
+                uses: actions/upload-artifact@v1.0.0
+                with:
+                    name: linux
+                    path: ./${{env.ARTIFACT_NAME}}
+                
+              - name: Echo an output
+                run: |
+                echo 'completed action'
+   windows-job:
+              name: 
+              runs-on:
+              steps:
+              - name: Checkout code
+                uses: actions/checkout@v2
+                
+              - name: step two
