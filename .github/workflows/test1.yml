@@ -1,6 +1,6 @@
-- name:
-  on: [push]
-  jobs:
+name: simple workflow
+on: [push]
+jobs:
     job1:
       name: first job
       runs-on: ubuntu-latest
