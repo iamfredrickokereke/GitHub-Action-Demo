@@ -15,7 +15,7 @@ jobs:
       runs-on: windows-latest
       steps:
       - name: step one
-        uses: action/checkout@v1
+        uses: actions/checkout@v1
       - name: step two
         run: date
 
@@ -24,7 +24,7 @@ jobs:
       runs-on: macos-latest
       steps:
       - name: step one
-        uses: action/checkout@v1
+        uses: actions/checkout@v1
       - name: step two
         run: date
 
