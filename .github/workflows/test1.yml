@@ -37,7 +37,6 @@
       - name: step one
         uses: action/checkout@v1
       - name: step two
-        run: |
-        echo date
+        run: date
 
         
