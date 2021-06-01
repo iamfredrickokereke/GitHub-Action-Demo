@@ -6,7 +6,8 @@
       - name: first job
         runs-on: ubuntu-latest
         steps:
-          - name: step one - checking out
+          - name: check out the code
             uses: action/checkout@v2
-          - name: step two - 
-            run: 
+          - name: Python Syntax Checker
+            uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+            run: echo "Done"
