@@ -16,6 +16,7 @@ jobs:
           print(platform.processor())
         shell: python
   run-windwos:
+    name: implementing on a window os
     runs-on: windows-latest
     needs: ["run-shell-command"]
     steps:
