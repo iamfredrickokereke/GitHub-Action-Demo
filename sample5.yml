@@ -2,6 +2,7 @@ on: push
 
 jobs:
   run-ubuntu:
+    name: implementing on a linux os
     runs-on: ubuntu-latest
     steps: 
       - name: echo a string
