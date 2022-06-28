@@ -3,7 +3,7 @@
   on: [push]
   jobs:
     job1:
-      - name: first job
+      - name: simple job
         runs-on: ubuntu-latest
         steps:
           - name: check out the code
